@@ -1,0 +1,374 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+background:#f5eefc;
+color:white;
+
+}
+
+/* Animated Background */
+
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-3;
+}
+
+.overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(18,25,35,.35);
+
+    backdrop-filter:blur(2px);
+
+    z-index:-2;
+
+}
+
+@keyframes float{
+
+from{
+transform:translateY(0);
+}
+
+to{
+
+transform:translateY(-300px);
+
+}
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-family:"Playfair Display";
+
+font-size:4rem;
+
+color:white;
+
+text-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.hero p{
+
+margin-top:15px;
+
+font-size:1.3rem;
+
+opacity:.9;
+
+}
+
+.message{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+}
+
+.glass{
+
+width:min(700px,90%);
+
+padding:45px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.25);
+
+border-radius:30px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.glass h2{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+}
+
+.glass p{
+
+line-height:2;
+
+font-size:1.2rem;
+
+color:white;
+
+}
+
+footer{
+
+height:200px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:1rem;
+
+opacity:.7;
+
+}
+
+.hidden{
+    opacity:0;
+    transition:1.3s ease;
+}
+
+.left.hidden{
+    transform:translateX(-80px);
+}
+
+.right.hidden{
+    transform:translateX(80px);
+}
+
+.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.message{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.hidden{
+
+    opacity:0;
+
+    transform:
+        translateY(80px)
+        scale(.96);
+
+    transition:
+
+        opacity 1.2s ease,
+
+        transform 1.2s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+@media (max-width:768px){
+
+.hero h1{
+
+    font-size:2.8rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+}
+
+.glass{
+
+    width:92%;
+
+    padding:28px;
+
+    border-radius:20px;
+
+}
+
+.glass p{
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+}
+
+.glass h2{
+
+    font-size:1.5rem;
+
+}
+
+.message{
+
+    padding:18px;
+
+}
+
+}
+
+#bg-video{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.scroll-indicator{
+
+position:absolute;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:2rem;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,12px);
+
+}
+
+}
+
+.message{
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 10%;
+}
+
+.message.left{
+    justify-content:flex-start;
+    text-align:left;
+}
+
+.message.right{
+    justify-content:flex-end;
+    text-align:right;
+}
+
+.message p{
+
+    max-width:500px;
+
+    font-size:clamp(1.5rem,3vw,2.8rem);
+
+    font-weight:300;
+
+    line-height:1.7;
+
+    color:white;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.45);
+
+}
+
+@media (max-width:768px){
+
+.message{
+
+    justify-content:center !important;
+
+    text-align:center !important;
+
+    padding:0 30px;
+
+}
+
+.message p{
+
+    max-width:100%;
+
+}
+
+}
