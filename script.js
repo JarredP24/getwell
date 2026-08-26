@@ -30,7 +30,7 @@ const letterContent = document.querySelector(".letter-content");
 const letterText = document.querySelector("#typed-letter");
 const signature = document.querySelector("#signature");
 
-const letter = `Hello, maye.
+const letter = `Hey, baby.
 
 Before anything else, I want to say that I'm genuinely sorry for what I did last night.
 
